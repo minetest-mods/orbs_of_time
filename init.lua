@@ -7,6 +7,8 @@ minetest.register_alias("castle:orb_night", "orbs_of_time:orb_night")
 
 minetest.register_tool("orbs_of_time:orb_day", {
 	description = S("Orb of Midday"),
+	_doc_items_longdesc = S("This magical orb grants you the power to bring the Sun to the zenith of the sky."),
+	_doc_items_usagehelp = S("When weilded, use this item and the Sun will jump to its highest point. The day will then progress normally from there. This orb can be used eight times - once for each diamond that was used to craft it."),
 	tiles = {"orbs_orb_day.png"},
 	inventory_image = "orbs_orb_day.png",
 	wield_image = "orbs_orb_day_weild.png",
@@ -23,7 +25,9 @@ minetest.register_tool("orbs_of_time:orb_day", {
 })
 
 minetest.register_tool("orbs_of_time:orb_night",{
- description = S("Orb of Midnight"),
+	description = S("Orb of Midnight"),
+	_doc_items_longdesc = S("This magical orb grants you the power to banish the Sun to the bottom of the world."),
+	_doc_items_usagehelp = S("When weilded, use this item and the Moon will jump to its highest point. The night will then progress normally from there. This orb can be used eight times - once for each diamond that was used to craft it."),
 	tiles = {"orbs_orb_night.png"},
 	inventory_image = "orbs_orb_night.png",
 	wield_image = "orbs_orb_night_weild.png",
@@ -42,6 +46,8 @@ minetest.register_tool("orbs_of_time:orb_night",{
 
 minetest.register_tool("orbs_of_time:orb_dawn", {
 	description = S("Orb of Dawn"),
+	_doc_items_longdesc = S("This magical orb grants you the power to bring the Sun to eastern horizon."),
+	_doc_items_usagehelp = S("When weilded, use this item and day will break. The day will then progress normally from there. This orb can be used eight times - once for each diamond that was used to craft it."),
 	tiles = {"orbs_orb_day.png"},
 	inventory_image = "orbs_orb_day.png^[lowpart:50:orbs_orb_night.png",
 	wield_image = "orbs_orb_day_weild.png^[lowpart:75:orbs_orb_night_weild.png",
@@ -59,6 +65,8 @@ minetest.register_tool("orbs_of_time:orb_dawn", {
 
 minetest.register_tool("orbs_of_time:orb_dusk",{
 	description = S("Orb of Dusk"),
+	_doc_items_longdesc = S("This magical orb grants you the power to send the Sun to western horizon."),
+	_doc_items_usagehelp = S("When weilded, use this item and night will fall. The night will then progress normally from there. This orb can be used eight times - once for each diamond that was used to craft it."),
 	tiles = {"orbs_orb_night.png"},
 	inventory_image = "orbs_orb_night.png^[lowpart:50:orbs_orb_day.png",
 	wield_image = "orbs_orb_night_weild.png^[lowpart:75:orbs_orb_day_weild.png",

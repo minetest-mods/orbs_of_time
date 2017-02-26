@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-25 20:04-0700\n"
+"POT-Creation-Date: 2017-02-25 21:08-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,14 +20,64 @@ msgstr ""
 msgid "Orb of Midday"
 msgstr ""
 
-#: init.lua:24
+#: init.lua:10
+msgid ""
+"This magical orb grants you the power to bring the Sun to the zenith of the "
+"sky."
+msgstr ""
+
+#: init.lua:11
+msgid ""
+"When weilded, use this item and the Sun will jump to its highest point. The "
+"day will then progress normally from there. This orb can be used eight times "
+"- once for each diamond that was used to craft it."
+msgstr ""
+
+#: init.lua:28
 msgid "Orb of Midnight"
 msgstr ""
 
-#: init.lua:40
+#: init.lua:29
+msgid ""
+"This magical orb grants you the power to banish the Sun to the bottom of the "
+"world."
+msgstr ""
+
+#: init.lua:30
+msgid ""
+"When weilded, use this item and the Moon will jump to its highest point. The "
+"night will then progress normally from there. This orb can be used eight "
+"times - once for each diamond that was used to craft it."
+msgstr ""
+
+#: init.lua:48
 msgid "Orb of Dawn"
 msgstr ""
 
-#: init.lua:55
+#: init.lua:49
+msgid ""
+"This magical orb grants you the power to bring the Sun to eastern horizon."
+msgstr ""
+
+#: init.lua:50
+msgid ""
+"When weilded, use this item and day will break. The day will then progress "
+"normally from there. This orb can be used eight times - once for each "
+"diamond that was used to craft it."
+msgstr ""
+
+#: init.lua:67
 msgid "Orb of Dusk"
+msgstr ""
+
+#: init.lua:68
+msgid ""
+"This magical orb grants you the power to send the Sun to western horizon."
+msgstr ""
+
+#: init.lua:69
+msgid ""
+"When weilded, use this item and night will fall. The night will then "
+"progress normally from there. This orb can be used eight times - once for "
+"each diamond that was used to craft it."
 msgstr ""
