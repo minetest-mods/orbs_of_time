@@ -17,7 +17,7 @@ minetest.register_tool("orbs_of_time:orb_day", {
 		minetest.sound_play("orbs_ding", {pos=user:getpos(), loop=false})
 		minetest.set_timeofday(0.5)
 		minetest.sound_play("orbs_birds", {pos=user:getpos(), loop=false})
-		if not minetest.setting_getbool("creative_mode") then
+		if not minetest.settings:get_bool("creative_mode") then
 			itemstack:add_wear(65535/8)
 		end
 		return itemstack
@@ -36,7 +36,7 @@ minetest.register_tool("orbs_of_time:orb_night",{
 		minetest.sound_play("orbs_ding", {pos=user:getpos(), loop=false})
 		minetest.set_timeofday(0)
 		minetest.sound_play("orbs_owl", {pos=user:getpos(), loop=false})
-		if not minetest.setting_getbool("creative_mode") then
+		if not minetest.settings:get_bool("creative_mode") then
 			itemstack:add_wear(65535/8)
 		end
 		return itemstack
@@ -56,7 +56,7 @@ minetest.register_tool("orbs_of_time:orb_dawn", {
 		minetest.sound_play("orbs_ding", {pos=user:getpos(), loop=false})
 		minetest.set_timeofday(0.2)
 		minetest.sound_play("orbs_birds", {pos=user:getpos(), loop=false})
-		if not minetest.setting_getbool("creative_mode") then
+		if not minetest.settings:get_bool("creative_mode") then
 			itemstack:add_wear(65535/8)
 		end
 		return itemstack
@@ -75,7 +75,7 @@ minetest.register_tool("orbs_of_time:orb_dusk",{
 		minetest.sound_play("orbs_ding", {pos=user:getpos(), loop=false})
 		minetest.set_timeofday(0.8)
 		minetest.sound_play("orbs_owl", {pos=user:getpos(), loop=false})
-		if not minetest.setting_getbool("creative_mode") then
+		if not minetest.settings:get_bool("creative_mode") then
 			itemstack:add_wear(65535/8)
 		end
 		return itemstack
