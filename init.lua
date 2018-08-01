@@ -88,9 +88,8 @@ minetest.register_tool("orbs_of_time:orb_dusk",{
 --Crafting
 -----------
 
-if minetest.get_modpath("mcl_core") ~= nil then
-
-	minetest.register_craft( {
+if minetest.get_modpath("mcl_core") then
+	minetest.register_craft({
 		output = "orbs_of_time:orb_day",
 		recipe = {
 			{"mcl_core:diamond", "mcl_core:diamond","mcl_core:diamond"},
@@ -107,10 +106,8 @@ if minetest.get_modpath("mcl_core") ~= nil then
 			{"mcl_core:diamond", "mcl_core:diamond","mcl_core:diamond"}
 		},
 	})
-
 else
-
-	minetest.register_craft( {
+	minetest.register_craft({
 		output = "orbs_of_time:orb_day",
 		recipe = {
 			{"mcl_core:diamond", "mcl_core:diamond","mcl_core:diamond"},
@@ -127,24 +124,23 @@ else
 			{"mcl_core:diamond", "mcl_core:diamond","mcl_core:diamond"}
 		},
 	})
-
 end
 
-	minetest.register_craft({
-		output = "orbs_of_time:orb_dawn 2",
-		recipe = {
-			{"orbs_of_time:orb_day"},
-			{"orbs_of_time:orb_night"},
-		},
-	})
+minetest.register_craft({
+	output = "orbs_of_time:orb_dawn 2",
+	recipe = {
+		{"orbs_of_time:orb_day"},
+		{"orbs_of_time:orb_night"},
+	},
+})
 
-	minetest.register_craft({
-		output = "orbs_of_time:orb_dusk 2",
-		recipe = {
-			{"orbs_of_time:orb_night"},
-			{"orbs_of_time:orb_day"},
-		},
-	})
+minetest.register_craft({
+	output = "orbs_of_time:orb_dusk 2",
+	recipe = {
+		{"orbs_of_time:orb_night"},
+		{"orbs_of_time:orb_day"},
+	},
+})
 
 -----------
 --Loot mod support
