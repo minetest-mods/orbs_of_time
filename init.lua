@@ -102,7 +102,7 @@ if minetest.get_modpath("mcl_core") then
 		output = "orbs_of_time:orb_night",
 		recipe = {
 			{"mcl_core:diamond", "mcl_core:diamond","mcl_core:diamond"},
-			{"mcl_core:diamond", "dye:black","mcl_core:diamond"},
+			{"mcl_core:diamond", "mcl_dye:black","mcl_core:diamond"},
 			{"mcl_core:diamond", "mcl_core:diamond","mcl_core:diamond"}
 		},
 	})
