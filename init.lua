@@ -1,7 +1,19 @@
+assert(core.is_creative_enabled, "API requirement is not met. Please update Luanti/Minetest.")
+
 local S = minetest.get_translator(minetest.get_current_modname())
 
 minetest.register_alias("castle:orb_day", "orbs_of_time:orb_day")
 minetest.register_alias("castle:orb_night", "orbs_of_time:orb_night")
+
+local function generic_on_use(itemstack, user, sound2)
+	core.sound_play("orbs_ding", {pos=user:get_pos(), loop=false})
+	core.set_timeofday(0.5)
+	core.sound_play(sound2, {pos=user:get_pos(), loop=false})
+	if not core.is_creative_enabled(user:get_player_name()) then
+		itemstack:add_wear(65535/8)
+	end
+	return itemstack
+end
 
 minetest.register_tool("orbs_of_time:orb_day", {
 	description = S("Orb of Midday"),
@@ -17,13 +29,7 @@ minetest.register_tool("orbs_of_time:orb_day", {
 	stack_max=1,
 	groups = { tool=1 },
 	on_use = function(itemstack, user)
-		minetest.sound_play("orbs_ding", {pos=user:get_pos(), loop=false})
-		minetest.set_timeofday(0.5)
-		minetest.sound_play("orbs_birds", {pos=user:get_pos(), loop=false})
-		if not minetest.settings:get_bool("creative_mode") then
-			itemstack:add_wear(65535/8)
-		end
-		return itemstack
+		return generic_on_use(itemstack, user, "orbs_birds")
 	end,
 })
 
@@ -40,13 +46,7 @@ minetest.register_tool("orbs_of_time:orb_night",{
 	stack_max=1,
 	groups = { tool=1 },
 	on_use = function(itemstack, user)
-		minetest.sound_play("orbs_ding", {pos=user:get_pos(), loop=false})
-		minetest.set_timeofday(0)
-		minetest.sound_play("orbs_owl", {pos=user:get_pos(), loop=false})
-		if not minetest.settings:get_bool("creative_mode") then
-			itemstack:add_wear(65535/8)
-		end
-		return itemstack
+		return generic_on_use(itemstack, user, "orbs_owl")
 	end,
 })
 
@@ -63,13 +63,7 @@ minetest.register_tool("orbs_of_time:orb_dawn", {
 	wield_image = "orbs_orb_day_weild.png^[lowpart:75:orbs_orb_night_weild.png",
 	stack_max=1,
 	on_use = function(itemstack, user)
-		minetest.sound_play("orbs_ding", {pos=user:get_pos(), loop=false})
-		minetest.set_timeofday(0.2)
-		minetest.sound_play("orbs_birds", {pos=user:get_pos(), loop=false})
-		if not minetest.settings:get_bool("creative_mode") then
-			itemstack:add_wear(65535/8)
-		end
-		return itemstack
+		return generic_on_use(itemstack, user, "orbs_birds")
 	end,
 })
 
@@ -84,13 +78,7 @@ minetest.register_tool("orbs_of_time:orb_dusk",{
 	wield_image = "orbs_orb_night_weild.png^[lowpart:75:orbs_orb_day_weild.png",
 	stack_max=1,
 	on_use = function(itemstack, user)
-		minetest.sound_play("orbs_ding", {pos=user:get_pos(), loop=false})
-		minetest.set_timeofday(0.8)
-		minetest.sound_play("orbs_owl", {pos=user:get_pos(), loop=false})
-		if not minetest.settings:get_bool("creative_mode") then
-			itemstack:add_wear(65535/8)
-		end
-		return itemstack
+		return generic_on_use(itemstack, user, "orbs_owl")
 	end,
 })
 
